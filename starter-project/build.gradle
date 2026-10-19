@@ -18,7 +18,7 @@ repositories {
 	mavenCentral()
 }
 
-// 웹 서버를 띄우는 데 필요한 최소한의 의존성만 넣었습니다.
+// 웹, 입력값 검증, Lombok 의존성만 넣었습니다.
 // DB, 캐시 등 필요한 의존성은 설계에 맞게 직접 추가해 주세요.
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
