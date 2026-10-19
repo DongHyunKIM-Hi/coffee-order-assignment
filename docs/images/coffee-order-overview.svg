@@ -1,0 +1,70 @@
+<svg viewBox="20 20 960 440" width="960" height="440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="커피숍 주문 시스템 구조: 요청을 보내는 쪽이 여러 대의 서버 중 하나로 요청을 보내고, 서버는 주문 내역을 데이터 수집 플랫폼으로 실시간 전송한다. 저장소와 인프라는 직접 선택한다">
+<title>과제 5 서버 구조</title>
+<desc>요청을 보내는 쪽에서 메뉴 조회, 포인트 충전, 주문과 결제, 인기 메뉴 조회 요청을 보낸다. 같은 애플리케이션이 여러 대의 서버에서 실행되며 요청은 그중 한 대로 들어간다. 서버는 주문 내역(사용자 식별값, 메뉴 ID, 결제 금액)을 데이터 수집 플랫폼으로 실시간 전송한다. 저장소와 인프라는 직접 선택한다.</desc>
+<rect x="20" y="20" width="960" height="440" fill="#ffffff"/>
+
+<defs>
+  <marker id="co-arrow-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+  </marker>
+  <marker id="co-arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/>
+  </marker>
+</defs>
+
+<!-- 요청자 -->
+<rect x="30" y="150" width="190" height="150" rx="10" fill="#eef2ff" stroke="#818cf8" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="sans-serif" fill="#312e81">
+  <tspan x="125" y="185" font-size="14" font-weight="700">요청을 보내는 쪽</tspan>
+  <tspan x="125" y="212" font-size="11.5">메뉴 목록 조회</tspan>
+  <tspan x="125" y="232" font-size="11.5">포인트 충전</tspan>
+  <tspan x="125" y="252" font-size="11.5">커피 주문과 결제</tspan>
+  <tspan x="125" y="272" font-size="11.5">인기 메뉴 조회</tspan>
+</text>
+
+<!-- 서버 여러 대 -->
+<rect x="275" y="45" width="300" height="360" rx="14" fill="#fbfbfc" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="295" y="72" font-size="14" font-weight="700" fill="#334155" font-family="sans-serif">커피숍 주문 서버</text>
+<text x="295" y="92" font-size="11.5" fill="#64748b" font-family="sans-serif">같은 애플리케이션을 여러 대에서 실행</text>
+
+<rect x="305" y="115" width="240" height="64" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="425" y="152" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a" font-family="sans-serif">서버 1</text>
+<rect x="305" y="195" width="240" height="64" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="425" y="232" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a" font-family="sans-serif">서버 2</text>
+<rect x="305" y="275" width="240" height="64" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="425" y="312" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a" font-family="sans-serif">서버 N</text>
+<text x="425" y="380" text-anchor="middle" font-size="11.5" fill="#b45309" font-family="sans-serif">같은 사용자의 요청이 서로 다른 서버로</text>
+<text x="425" y="396" text-anchor="middle" font-size="11.5" fill="#b45309" font-family="sans-serif">동시에 들어올 수 있습니다</text>
+
+<!-- 요청 화살표 -->
+<path d="M220,205 L262,205 L262,147 L303,147" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#co-arrow-blue)"/>
+<line x1="220" y1="227" x2="303" y2="227" stroke="#2563eb" stroke-width="2" marker-end="url(#co-arrow-blue)"/>
+<path d="M220,249 L262,249 L262,307 L303,307" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#co-arrow-blue)"/>
+
+<!-- 데이터 수집 플랫폼 -->
+<rect x="680" y="70" width="270" height="110" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+<text text-anchor="middle" font-family="sans-serif" fill="#334155">
+  <tspan x="815" y="110" font-size="14" font-weight="700">데이터 수집 플랫폼</tspan>
+  <tspan x="815" y="132" font-size="11.5">Mock API나 테스트 코드로 대신합니다</tspan>
+</text>
+<line x1="575" y1="125" x2="678" y2="125" stroke="#64748b" stroke-width="1.5" marker-end="url(#co-arrow-gray)"/>
+<text x="627" y="102" text-anchor="middle" font-size="11" fill="#334155" font-family="sans-serif">주문 내역</text>
+<text x="627" y="116" text-anchor="middle" font-size="11" fill="#334155" font-family="sans-serif">실시간 전송</text>
+<text x="815" y="158" text-anchor="middle" font-size="11" fill="#b45309" font-family="sans-serif">사용자 식별값, 메뉴 ID, 결제 금액</text>
+
+<!-- 저장소와 인프라 -->
+<rect x="680" y="250" width="270" height="110" rx="8" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text text-anchor="middle" font-family="sans-serif" fill="#334155">
+  <tspan x="815" y="292" font-size="14" font-weight="700">저장소와 인프라</tspan>
+  <tspan x="815" y="314" font-size="11.5">직접 선택합니다 (사용 제약 없음)</tspan>
+</text>
+<line x1="575" y1="305" x2="678" y2="305" stroke="#64748b" stroke-width="1.5" marker-end="url(#co-arrow-gray)"/>
+
+<!-- 범례 -->
+<rect x="30" y="425" width="14" height="14" fill="#dbeafe" stroke="#3b82f6"/>
+<text x="50" y="436" font-size="12" fill="#334155" font-family="sans-serif">직접 구현하는 부분</text>
+<rect x="190" y="425" width="14" height="14" fill="#f1f5f9" stroke="#64748b"/>
+<text x="210" y="436" font-size="12" fill="#334155" font-family="sans-serif">외부 시스템 (Mock으로 대신)</text>
+<rect x="400" y="425" width="14" height="14" fill="#ffffff" stroke="#94a3b8" stroke-dasharray="3 2"/>
+<text x="420" y="436" font-size="12" fill="#334155" font-family="sans-serif">직접 선택하는 부분</text>
+</svg>
