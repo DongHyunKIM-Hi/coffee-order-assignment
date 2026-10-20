@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.practice.coffee'
 version = '0.0.1-SNAPSHOT'
-description = '과제 5. 커피숍 주문 시스템 - 시작 프로젝트'
+description = '커피숍 주문 시스템 시작 프로젝트'
 
 java {
 	toolchain {

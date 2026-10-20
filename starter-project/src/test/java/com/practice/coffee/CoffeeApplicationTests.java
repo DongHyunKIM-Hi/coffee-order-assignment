@@ -8,6 +8,7 @@ class CoffeeApplicationTests {
 
     @Test
     void contextLoads() {
-        // 서버가 정상적으로 실행되는지만 확인하는 테스트입니다.
+        // 스프링 설정이 오류 없이 올라오는지 확인하는 기본 테스트입니다.
+        // DB 등 인프라를 추가하면 이 테스트에도 그 설정이 필요할 수 있습니다.
     }
 }
